@@ -407,4 +407,5 @@ module.exports = {
     // https://eslint.org/docs/rules/yoda
     yoda: 'error'
   }
-}
+};
+
