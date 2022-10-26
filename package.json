@@ -1,0 +1,28 @@
+{
+  "name": "javascript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "preinstall": "npm run install:config && npm run install:config:base",
+    "postinstall": "rm -rf node_modules/markdownlint-cli/node_modules/markdownlint",
+    "install:config": "cd packages/eslint-config-airbnb && npm prune && npm install",
+    "install:config:base": "cd packages/eslint-config-airbnb-base && npm prune && npm install",
+    "lint": "markdownlint --config linters/.markdownlint.json README.md */README.md",
+    "pretest": "npm run --silent lint",
+    "test": "npm run --silent test:config && npm run --silent test:config:base",
+    "test:config": "cd packages/eslint-config-airbnb; npm test",
+    "test:config:base": "cd packages/eslint-config-airbnb-base; npm test",
+    "pretravis": "npm run --silent lint",
+    "travis": "npm run --silent travis:config && npm run --silent travis:config:base",
+    "travis:config": "cd packages/eslint-config-airbnb; npm run travis",
+    "travis:config:base": "cd packages/eslint-config-airbnb-base; npm run travis"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "markdownlint": "^0.26.2",
+    "markdownlint-cli": "^0.32.2"
+  }
+}
