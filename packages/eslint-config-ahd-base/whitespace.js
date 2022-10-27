@@ -6,7 +6,6 @@ if (CLIEngine) {
   /* eslint no-inner-declarations: 0 */
   const assign = require('object.assign');
   const entries = require('object.entries');
-  const whitespaceRules = require('./whitespaceRules');
 
   const baseConfig = require('.');
 
@@ -46,10 +45,5 @@ if (CLIEngine) {
     return errorsOnly;
   }
 
-  module.exports = onlyErrorOnRules(whitespaceRules, baseConfig);
-} else {
-  const path = require('path');
-  const { execSync } = require('child_process');
-
-  module.exports = JSON.parse(String(execSync(path.join(__dirname, 'whitespace-async.js'))));
+  module.exports = onlyErrorOnRules(baseConfig);
 }

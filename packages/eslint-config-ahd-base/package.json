@@ -2,7 +2,7 @@
   "name": "@ahdcreative/eslint-config-ahd-base",
   "description": "AHD base JS ESLint config, following our styleguide",
   "private": false,
-  "version": "1.0.7",
+  "version": "1.0.8",
   "main": "index.js",
   "exports": {
     ".": "./index.js",
@@ -18,16 +18,13 @@
     "./rules/variables": "./rules/variables.js",
     "./package.json": "./package.json"
   },
-  "scripts": {
-    "lint": "eslint --report-unused-disable-directives --fix ."
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/ahdcreative/javascript"
   },
   "devDependencies": {
     "@babel/runtime": "^7.19.0",
-    "babel-preset-airbnb": "^5.0.0",
+    "@ahdcreative/babel-preset-ahd": "^1.0.1",
     "babel-tape-runner": "^3.0.0",
     "eclint": "^2.8.1",
     "eslint": "^7.32.0 || ^8.2.0",
@@ -48,5 +45,15 @@
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
+  },
+  "scripts": {
+    "prelint": "eclint check $(git ls-files | xargs find 2> /dev/null | grep -vE 'node_modules|\\.git')",
+    "lint": "eslint --fix .",
+    "pretests-only": "node ./test/requires",
+    "tests-only": "babel-tape-runner ./test/test-*.js",
+    "prepublishOnly": "npm test && safe-publish-latest",
+    "prepublish": "not-in-publish || npm run prepublishOnly",
+    "pretest": "npm run --silent lint",
+    "test": "npm run --silent tests-only"
   }
 }
