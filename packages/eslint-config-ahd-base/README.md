@@ -75,7 +75,7 @@ Lints ES5 and below. Requires `eslint` and `eslint-plugin-import`.
 Linux/OSX users can run
   ```sh
   (
-    export PKG=eslint-config-airbnb-base;
+    export PKG=@ahdcreative/eslint-config-ahd-base;
     npm info "$PKG" peerDependencies --json | command sed 's/[\{\},]//g ; s/: /@/g' | xargs npm install --save-dev "$PKG"
   )
   ```
@@ -86,13 +86,13 @@ Which produces and runs a command like:
   npm install --save-dev @ahdcreative/eslint-config-ahd-base eslint@^#.#.# eslint-plugin-import@^#.#.#
   ```
 
-2. Add `"extends": "airbnb-base/legacy"` to your .eslintrc
+2. Add `"extends": "ahd-base/legacy"` to your .eslintrc
 
-See [AHDCreative's overarching ESLint config](https://npmjs.com/@ahdcreative/eslint-config-ahd-base), [Airbnb's JavaScript styleguide](https://github.com/airbnb/javascript), and the [ESlint config docs](https://eslint.org/docs/user-guide/configuring#extending-configuration-files) for more information.
+See [AHDCreative's overarching ESLint config](https://npmjs.com/@ahdcreative/eslint-config-ahd-base), [AHDCreative's JavaScript styleguide](https://github.com/ahdcreative/javascript), and the [ESlint config docs](https://eslint.org/docs/user-guide/configuring#extending-configuration-files) for more information.
 
 ### eslint-config-ahd-base/whitespace
 
-This entry point only errors on whitespace rules and sets all other rules to warnings. View the list of whitespace rules [here](https://github.com/airbnb/javascript/blob/master/packages/eslint-config-airbnb-base/whitespace.js).
+This entry point only errors on whitespace rules and sets all other rules to warnings. View the list of whitespace rules [here](https://github.com/ahdcreative/ahdcreative/blob/master/packages/eslint-config-ahd-base/whitespace.js).
 
 ## Improving this config
 
@@ -103,8 +103,8 @@ You can run tests with `npm test`.
 You can make sure this module lints with itself using `npm run lint`.
 
 [package-url]: https://npmjs.org/package/@ahdcreative/eslint-config-ahd-base
-[npm-version-svg]: https://versionbadg.es/airbnb/javascript.svg
-[license-image]: https://img.shields.io/npm/l/eslint-config-airbnb-base.svg
+[npm-version-svg]: https://versionbadg.es/ahdcreative/javascript.svg
+[license-image]: https://img.shields.io/npm/l/@ahdcreative/eslint-config-ahd-base.svg
 [license-url]: LICENSE.md
 [downloads-image]: https://img.shields.io/npm/dm/@ahdcreative/eslint-config-ahd-base.svg
 [downloads-url]: https://npm-stat.com/charts.html?package=@ahdcreative/eslint-config-ahd-base

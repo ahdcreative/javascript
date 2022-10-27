@@ -2,7 +2,7 @@
   "name": "@ahdcreative/eslint-config-ahd-base",
   "description": "AHD base JS ESLint config, following our styleguide",
   "private": false,
-  "version": "1.0.5",
+  "version": "1.0.7",
   "main": "index.js",
   "exports": {
     ".": "./index.js",
