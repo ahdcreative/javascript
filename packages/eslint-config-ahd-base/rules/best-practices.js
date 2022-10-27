@@ -408,4 +408,3 @@ module.exports = {
     yoda: 'error'
   }
 };
-

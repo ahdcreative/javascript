@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 const assign = require('object.assign');
 const entries = require('object.entries');
 const { ESLint } = require('eslint');
