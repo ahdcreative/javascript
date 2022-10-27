@@ -92,7 +92,7 @@ See [AHDCreative's overarching ESLint config](https://npmjs.com/@ahdcreative/esl
 
 ### eslint-config-ahd-base/whitespace
 
-This entry point only errors on whitespace rules and sets all other rules to warnings. View the list of whitespace rules [here](https://github.com/ahdcreative/ahdcreative/blob/master/packages/eslint-config-ahd-base/whitespace.js).
+This entry point only errors on whitespace rules and sets all other rules to warnings. View the list of whitespace rules [here](https://github.com/ahdcreative/javascript/blob/master/packages/eslint-config-ahd-base/whitespace.js).
 
 ## Improving this config
 
