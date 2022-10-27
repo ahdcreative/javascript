@@ -1,4 +1,4 @@
 module.exports = {
-    extends: ['@ahdcreative/eslint-config-ahd-base/legacy'].map(require.resolve),
-    rules: {},
+  extends: ['@ahdcreative/eslint-config-ahd-base/legacy'].map(require.resolve),
+  rules: {},
 };
